@@ -28,7 +28,7 @@ public class AuthorBookDAOImpl implements AuthorBookDAO {
 
 	@Override
 	public List<Book> getBooksByAuthor(String author_name) {
-		Query query=  manager.createQuery("select b from Book b join b.authorList a where a.authorName=:'author_name'");
+		Query query=  manager.createQuery("select b from Book b join b.authorList a where a.authorName=:author_name");
 		query.setParameter("author_name",author_name);
 		return query.getResultList();
 	}
@@ -42,7 +42,7 @@ public class AuthorBookDAOImpl implements AuthorBookDAO {
 
 	@Override
 	public List<String> getAuthorName(long b_id) {
-		Query query=  manager.createQuery("select a.authorName from Author a join a.bookList b where b.bookIsbn=:'b_id'");
+		Query query=  manager.createQuery("select a.authorName from Author a join a.bookList b where b.bookIsbn=:b_id");
 		query.setParameter("b_id",b_id);
 		return query.getResultList();
 	}
