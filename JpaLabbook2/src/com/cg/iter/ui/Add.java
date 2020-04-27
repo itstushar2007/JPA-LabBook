@@ -7,12 +7,12 @@ import com.cg.iter.entities.Book;
 import com.cg.iter.util.Jpa;
 
 public class Add {
-	Jpa con;
+	Jpa link;
 	EntityManager manager;
 	
 	public Add() {
 		
-		con=new Jpa();
+		link=new Jpa();
 		manager=con.getManager();
 		
 		Author Tagore = new Author("Tagore");
