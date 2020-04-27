@@ -13,7 +13,7 @@ public class Add {
 	public Add() {
 		
 		link=new Jpa();
-		manager=con.getManager();
+		manager=link.getManager();
 		
 		Author Tagore = new Author("Tagore");
 		Book book1 = new Book(987654 ,"Gitanjali" , 800);
